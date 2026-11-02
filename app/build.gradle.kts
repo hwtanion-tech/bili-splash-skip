@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        create("release") {
+            storeFile = file(System.getenv("BILI_KEYSTORE"))
+            storePassword = System.getenv("BILI_KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("BILI_KEY_ALIAS")
+            keyPassword = System.getenv("BILI_KEY_PASSWORD")
+        }
+    }
     namespace = "io.github.bilisplashskip"
     compileSdk = 35
 
@@ -17,7 +25,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
+        isMinifyEnabled = false
         }
     }
 
