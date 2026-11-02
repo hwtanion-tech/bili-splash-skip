@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Bili 开屏助手</string>
+    <string name="history_summary">点击操作成功：%1$d 次\n最后一次：%2$s\n（表示系统接受了点击操作，不保证广告实际关闭。）</string>
+    <string name="service_name">Bili 开屏助手 · 自动跳过</string>
+    <string name="service_description">仅在哔哩哔哩进入前台后的短时间内，读取其界面节点并点击可识别的开屏广告“跳过”按钮。不截图、不联网、不保存界面内容。请先在应用内开启功能；可随时在这里停用服务。</string>
+</resources>
